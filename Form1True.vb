@@ -1,4 +1,4 @@
-﻿Public Class CheckIn
+Public Class CheckIn
     Dim Tarif_Extra, Biaya_Extra, Total_Biaya As Single
 
     Private Sub btnClose_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnClose.Click
@@ -69,30 +69,31 @@
     Private Sub btnPilih_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnPilih.Click
         Me.Enabled = False
         Form_PilihKamar.Show()
+
     End Sub
 
-    Private Sub rbBed_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles rbBed.KeyPress
+    Private Sub rbBed_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If e.KeyChar = Chr(13) Then
             tJmlExtra.Enabled = True
             tJmlExtra.Focus()
         End If
     End Sub
 
-    Private Sub rbFan_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles rbFan.KeyPress
+    Private Sub rbFan_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If e.KeyChar = Chr(13) Then
             tJmlExtra.Enabled = True
             tJmlExtra.Focus()
         End If
     End Sub
 
-    Private Sub rbBedFan_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles rbBedFan.KeyPress
+    Private Sub rbBedFan_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If e.KeyChar = Chr(13) Then
             tJmlExtra.Enabled = True
             tJmlExtra.Focus()
         End If
     End Sub
 
-    Private Sub rbTidak_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles rbTidak.KeyPress
+    Private Sub rbTidak_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If e.KeyChar = Chr(13) Then
             tJmlExtra.Enabled = False
             Total_Biaya = Biaya_Kamar
@@ -101,7 +102,7 @@
         End If
     End Sub
 
-    Private Sub tJmlExtra_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles tJmlExtra.KeyPress
+    Private Sub tJmlExtra_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If e.KeyChar = Chr(13) Then
             If rbBed.Checked = True Then
                 Tarif_Extra = 200000
